@@ -8,71 +8,83 @@
 </head>
 
 <body>
-    <div id="Cabecalho"><img src="" alt="">
-        <ul>
-            <li>
-                inicio
-            </li>
-            <li>
-                Serviços
-            </li>
-            <li>
-                Sobre Nos
-            </li>
-            <li>
-                Contato
-            </li>
-        </ul>
-    </div>
-    <div id="secao1">
+    <header>
+        <img src="" alt="" id="header-logo">
+        <nav id="cabecalho"><img src="" alt="">
+
+            <a>Inicio</a>
+            <a>Serviços</a>
+            <a>Sobre Nós</a>
+            <a>Contato</a>
+
+        </nav>
+    </header>
+
+    <section id="secao1">
         <div id="card-entre-em-contato">
             <p>Cuidando do Seu pet com Profissionalismo e Carinho</p>
             <button>Entre em Contato</button><img src="" alt="">
         </div>
-        <div id="Campanha de vacinacao">
-            <h1>Campanha de Vacinção</h1>
-            <p>Nos dias 19 a 28 de Novembro</p>
-            <button>Saiba Mais</button><img src="" alt="">
-
+        <div id="carrousel">
+            <div id="carrousel-1" class="carrousel-card">
+                <h1>Campanha de vacinção</h1>
+                <p>Nos dias 19 a 28 de Novembro</p>
+                <button>Saiba Mais</button><img src="" alt="">
+            </div>
+            <div id="carrousel-2" class="carrousel-card">
+                <h1>Campanha de adoção</h1>
+                <p>Dê um lar cheio de amor a quem só quer te fazer feliz! Adote um amigo de quatro patas e transforme
+                    sua vida e a dele.</p>
+                <button>Saiba Mais</button><img src="" alt="">
+            </div>
+            <div id="carrousel-3" class="carrousel-card">
+                <h1>Campanha de adoção</h1>
+                <p>Nossa clínica dispõe do serviço de higiene para seu pet permanecer limpo, cheiroso e longe de
+                    parasitas.</p>
+                <button>Saiba Mais</button><img src="" alt="">
+            </div>
         </div>
-    </div>
-    <div id="secao2">
+    </section>
+    <section id="secao2">
         <div id="quem somos">
             <img src="" alt="">
             <h1>Quem Somos</h1>
-            <p>Nossa clínica veterinária é comprometida com o cuidado e bem-estar de cada pet, com uma equipe dedicada e
+            <p>Nossa clínica veterinária é comprometida com o cuidado e bem-estar de cada pet, com uma equipe
+                dedicada e
                 instalações modernas, buscamos garantir saúde e conforto em cada atendimento. Cuidamos do seu
                 animalzinho como se fosse nosso!</p>
         </div>
-        <div id="Nossos Servicos">
+        <div id="nossos-servicos">
             <img src="" alt="">
-            <p>Na nossa clínica veterinária, cada consulta é realizada com dedicação e atenção aos detalhes, garantindo
+            <p>Na nossa clínica veterinária, cada consulta é realizada com dedicação e atenção aos detalhes,
+                garantindo
                 o melhor cuidado para o seu pet. Contamos com uma equipe experiente e atualizada para oferecer
                 diagnósticos precisos e tratamentos eficazes.</p>
             <p>Nós cuidamos do seu pet com o carinho e respeito que ele merece. Nossa equipe dedica atenção a cada
-                detalhe, proporcionando um ambiente acolhedor e seguro para que seu animalzinho se sinta em casa.</p>
+                detalhe, proporcionando um ambiente acolhedor e seguro para que seu animalzinho se sinta em casa.
+            </p>
             <img src="" alt="">
         </div>
-    </div>
-    <div id="secao3">
-        <div id="Nossos Profissionais">
+    </section>
+    <section id="secao3">
+        <div id="nossos-profissionais">
             <h1>Nossos Profissionais</h1>
-            <div class="Profissional">
+            <div class="profissional">
                 <img src="" alt="">
                 <h2>Carlos De Souza</h2>
                 <h3>Cirurgia Veterinaria</h3>
             </div>
-            <div class="Profissional">
+            <div class="profissional">
                 <img src="" alt="">
                 <h2>João Paulo</h2>
                 <h3>Dermatorlogia Veterinaria</h3>
             </div>
-            <div class="Profissional">
+            <div class="profissional">
                 <img src="" alt="">
                 <h2>José da Silva</h2>
                 <h3>Patologia</h3>
             </div>
-            <div class="Profissional">
+            <div class="profissional">
                 <img src="" alt="">
                 <h2>fulano</h2>
                 <h3>Anestesiologia</h3>
@@ -80,7 +92,7 @@
         </div>
         <div id="avaliacoes">
             <h1>Avaliações</h1>
-            <div id=" lista de avaliacoes">
+            <div id="lista-avaliacoes">
                 <div class="avaliacao">
                     <img src="" alt=""> <span class="estrelas"></span>
                     <h2>Carlos Alberto</h2>
@@ -95,80 +107,69 @@
                 <div class="avaliacao">
                     <img src="" alt=""> <span class="estrelas"></span>
                     <h2>Josseana da Silva</h2>
-                    <p>Excelente clínica! Desde o primeiro contato, fui atendido com profissionalismo e gentileza.</p>
+                    <p>Excelente clínica! Desde o primeiro contato, fui atendido com profissionalismo e gentileza.
+                    </p>
                 </div>
             </div>
         </div>
-        <div id="Formulario de contato">
-            <div>
+        <div id="contato-card">
+            <div id="contato-localização">
                 <h1>localização</h1>
                 <h2>Rua Fulana de tal, 9999 CEP 99999-999 Pindorama/SP</h2>
                 <img src="" alt="">
                 <h3>(99)99999999</h3>
                 <h3>@PindoramaClinica</h3>
                 <h3>PindoramaClinica </h3>
-                <ul>
-                    <li>
-                        Nome
+            </div>
+            <div id="contato-form">
+                <form action="">
+                    <div class="form-line">
+                        <label for="form-nome">Nome</label>
+                        <input type="text" id="form-nome">
+                    </div>
 
-                    </li>
-                    <li>
-                        Sobrenome
+                    <div class="form-line">
+                        <label for="form-sobrenome">Sobrenome</label>
+                        <input type="text" id="form-sobrenome">
+                    </div>
 
-                    </li>
-                    <li>
-                        E-mail
+                    <div class="form-line">
+                        <label for="form-email">E-mail</label>
+                        <input type="text" id="form-email">
+                    </div>
 
-                    </li>
-                    <li>
-                        Mensagem
+                    <div class="form-text">
+                        <label for="form-mensagem">Mensagem</label>
+                        <input type="text">
+                    </div>
+                    <input type="submit">
+                </form>
 
-                    </li>
-                </ul>
-                <button>Enviar</button>
             </div>
         </div>
-    </div>
-    <div id="Rodapé"><img src="" alt="">
+    </section>
+    <footer id="rodape">
+        <img src="" alt="">
         <h1>Nossos Serviços</h1>
         <ul>
-            <li>
-                SOBRE NOS
-
-            </li>
-            <li>
-                TERMOS DE COMPROMISSO
-
-            </li>
-            <li>
-                NOSSOS SERVIÇOS
-
-            </li>
-
+            <li>SOBRE NOS</li>
+            <li>TERMOS DE COMPROMISSO</li>
+            <li>NOSSOS SERVIÇOS</li>
         </ul>
         <h1>INSTITUCIONAL</h1>
         <ul>
-            <li>
-                PROGRAMA DE ADOÇÃO
-
-            </li>
-            <li>
-                TERMOS DE COMPROMISSO
-
-            </li>
-            <li>
-                UNECT JR
-
-            </li>
+            <li>PROGRAMA DE ADOÇÃO</li>
+            <li>TERMOS DE COMPROMISSO</li>
+            <li>UNECT JR</li>
         </ul>
         <h1>NOSSOS CONTATOS</h1>
-        <span class="icones contato"></span>
-        <span class="icones contato"></span>
-        <span class="icones contato"></span>
+        <span class="icones contato"><img src="" alt=""></span>
+        <span class="icones contato"><img src="" alt=""></span>
+        <span class="icones contato"><img src="" alt=""></span>
         <div>
             <p>UNECT JR - TODOS OS DIREITOS RESERVADOS</p>
         </div>
-    </div>
+    </footer>
 </body>
 
 </html>
