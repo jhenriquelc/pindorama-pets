@@ -11,6 +11,10 @@
         rel="stylesheet">
     <title>Pindorama Pets</title>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: #E2F5FA;
             font-family: 'Open Sans', sans-serif;
@@ -87,12 +91,15 @@
 <body>
     <header>
         <nav id="cabecalho">
-            <img id="header-logo" src="img/logo-horizontal.svg" alt="Logo Pindorama Pets">
+            <a href="#">
+                <img id="header-logo" src="img/logo-horizontal.svg" alt="Logo Pindorama Pets">
+            </a>
+
             <div class="nav-links">
-                <a>Inicio</a>
-                <a>Serviços</a>
-                <a>Sobre Nós</a>
-                <a>Contato</a>
+                <a href="#">Inicio</a>
+                <a href="#nossos-servicos">Serviços</a>
+                <a href="#quem-somos">Sobre Nós</a>
+                <a href="#contato-card">Contato</a>
             </div>
         </nav>
     </header>
@@ -135,7 +142,7 @@
         </div>
     </section>
     <section id="secao2">
-        <div id="quem somos">
+        <div id="quem-somos">
             <img src="img/logo-square.svg" alt="Logo Pindorama Pets">
             <h1>Quem Somos</h1>
             <p>Nossa clínica veterinária é comprometida com o cuidado e bem-estar de cada pet, com uma equipe
