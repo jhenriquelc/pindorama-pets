@@ -81,9 +81,22 @@
         .nav-links {
             margin-left: auto;
             display: flex;
-            gap: 40px;
+            gap: 32px;
             padding: 4px;
             align-items: center;
+            transition: 0.3s;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            border-radius: 15px;
+            color: #063643;
+            transition: 0.3s;
+            padding: 2px 4px;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(107, 183, 203, 0.4);
         }
     </style>
 </head>
@@ -96,7 +109,7 @@
             </a>
 
             <div class="nav-links">
-                <a href="#">Inicio</a>
+                <a href="#">Início</a>
                 <a href="#nossos-servicos">Serviços</a>
                 <a href="#quem-somos">Sobre Nós</a>
                 <a href="#contato-card">Contato</a>
