@@ -98,6 +98,66 @@
         .nav-links a:hover {
             background-color: rgba(107, 183, 203, 0.4);
         }
+
+        section {
+            padding: 40px 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
+
+        #secao3 {
+            max-width: 1140px;
+            padding: 40px 0;
+            margin: 0 auto;
+        }
+
+        #avaliacoes {
+            max-width: 1000px;
+            padding: 0 40px;
+        }
+
+        .avaliacao {
+            display: flex;
+            gap: 20px;
+        }
+        
+
+        .avaliador-foto {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            object-fit: cover;
+            align-self: center;
+            flex-grow: 0;
+            flex-shrink: 0;
+            padding: 0 20px;
+        }
+
+        .avaliacao-content {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .avaliacao-content * {
+            margin: 0px;
+        }
+
+        .avaliacao h2 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        #avaliacoes hr {
+            border: 1px solid rgba(0, 0, 0, 0.1); /* 1px em border gera uma linha de 2px */
+            width: 100%;
+            margin: 20px 0;
+        }
     </style>
 </head>
 
@@ -204,21 +264,38 @@
             <h1>Avaliações</h1>
             <div id="lista-avaliacoes">
                 <div class="avaliacao">
-                    <img src="img/avaliadores/1.png" alt="Foto de perfil do avaliador"> <span class="estrelas"></span>
-                    <h2>Carlos Alberto</h2>
-                    <p>Atendimento excepcional! A equipe foi muito cuidadosa e atenciosa com meu pet.</p>
+                    <img class="avaliador-foto" src="img/avaliadores/1-cropped.jpg" alt="Foto de perfil do avaliador">
+                    <div class="avaliacao-content">
+                        <div class="estrelas"><img src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
+                                alt="estrela"><img src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
+                                alt="estrela"><img src="img/icons/star.svg" alt="estrela"></div>
+                        <h2>Carlos Alberto</h2>
+                        <p>Atendimento excepcional! A equipe foi muito cuidadosa e atenciosa com meu pet.</p>
+                    </div>
                 </div>
+                <hr>
                 <div class="avaliacao">
-                    <img src="img/avaliadores/2.png" alt="Foto de perfil do avaliador"> <span class="estrelas"></span>
-                    <h2>Neymar Jr.</h2>
-                    <p>Não poderia estar mais feliz com o serviço desta clínica. Profissionais qualificados e
-                        atenciosos.</p>
+                    <img class="avaliador-foto" src="img/avaliadores/2-cropped.jpg" alt="Foto de perfil do avaliador">
+                    <div class="avaliacao-content">
+                        <div class="estrelas"><img src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
+                            alt="estrela"><img src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
+                            alt="estrela"><img src="img/icons/star.svg" alt="estrela"></div>
+                        <h2>Neymar Jr.</h2>
+                        <p>Não poderia estar mais feliz com o serviço desta clínica. Profissionais qualificados e
+                            atenciosos.</p>
+                    </div>
                 </div>
+                <hr>
                 <div class="avaliacao">
-                    <img src="img/avaliadores/3.png" alt="Foto de perfil do avaliador"> <span class="estrelas"></span>
-                    <h2>Josseana da Silva</h2>
-                    <p>Excelente clínica! Desde o primeiro contato, fui atendido com profissionalismo e gentileza.
-                    </p>
+                    <img class="avaliador-foto" src="img/avaliadores/3-cropped.jpg" alt="Foto de perfil do avaliador">
+                    <div class="avaliacao-content">
+                        <div class="estrelas"><img src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
+                            alt="estrela"><img src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
+                            alt="estrela"><img src="img/icons/star.svg" alt="estrela"></div>
+                        <h2>Josseana da Silva</h2>
+                        <p>Excelente clínica! Desde o primeiro contato, fui atendido com profissionalismo e gentileza.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
