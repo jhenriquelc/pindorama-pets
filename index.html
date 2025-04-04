@@ -29,6 +29,7 @@
             font-weight: 700;
             font-size: 24px;
             line-height: 100%;
+            padding-bottom: 30px;
         }
 
         h2 {
@@ -36,6 +37,10 @@
             font-weight: 700;
             font-size: 20px;
             line-height: 100%;
+        }
+
+        svg {
+            fill: #063643;
         }
 
         #card-entre-em-contato h1 {
@@ -115,15 +120,21 @@
         }
 
         #avaliacoes {
-            max-width: 1000px;
-            padding: 0 40px;
+            max-width: 1140px;
+            width: 100%;
+        }
+
+        .estrelas {
+            display: flex;
+            gap: 8px
         }
 
         .avaliacao {
             display: flex;
             gap: 20px;
+            padding: 0 20px;
         }
-        
+
 
         .avaliador-foto {
             width: 80px;
@@ -134,15 +145,18 @@
             align-self: center;
             flex-grow: 0;
             flex-shrink: 0;
-            padding: 0 20px;
+        }
+
+        .pad-sides {
+            padding: 0 40px;
         }
 
         .avaliacao-content {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 8px;
         }
-        
+
         .avaliacao-content * {
             margin: 0px;
         }
@@ -153,10 +167,53 @@
             font-size: 20px;
         }
 
+        .avaliacao p {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+        }
+
         #avaliacoes hr {
-            border: 1px solid rgba(0, 0, 0, 0.1); /* 1px em border gera uma linha de 2px */
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            /* 1px em border gera uma linha de 2px */
             width: 100%;
             margin: 20px 0;
+        }
+
+        #controles-avaliacoes {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            padding-top: 50px;
+            gap: 20px;
+        }
+
+        #controles-avaliacoes button {
+            background-color: transparent;
+            border: 1px solid #063643;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 30px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        #controles-avaliacoes button svg {
+            transition: 0.3s;
+        }
+
+        #controles-avaliacoes button:hover {
+            background-color: #6BB7CB;
+        }
+
+        #controles-avaliacoes button:active {
+            background-color: #063643;
+            color: #FFFFFF;
+        }
+
+        #controles-avaliacoes button:active svg {
+            fill: #FFFFFF;
         }
     </style>
 </head>
@@ -261,41 +318,65 @@
             </div>
         </div>
         <div id="avaliacoes">
-            <h1>Avaliações</h1>
-            <div id="lista-avaliacoes">
-                <div class="avaliacao">
-                    <img class="avaliador-foto" src="img/avaliadores/1-cropped.jpg" alt="Foto de perfil do avaliador">
-                    <div class="avaliacao-content">
-                        <div class="estrelas"><img src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
-                                alt="estrela"><img src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
-                                alt="estrela"><img src="img/icons/star.svg" alt="estrela"></div>
-                        <h2>Carlos Alberto</h2>
-                        <p>Atendimento excepcional! A equipe foi muito cuidadosa e atenciosa com meu pet.</p>
+            <div class="pad-sides">
+                <h1>Avaliações</h1>
+                <div id="lista-avaliacoes">
+                    <div class="avaliacao">
+                        <img class="avaliador-foto" src="img/avaliadores/1-cropped.jpg"
+                            alt="Foto de perfil do avaliador">
+                        <div class="avaliacao-content">
+                            <div class="estrelas"><img src="img/icons/star.svg" alt="estrela"><img
+                                    src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
+                                    alt="estrela"><img src="img/icons/star.svg" alt="estrela"><img
+                                    src="img/icons/star.svg" alt="estrela"></div>
+                            <h2>Carlos Alberto</h2>
+                            <p>Atendimento excepcional! A equipe foi muito cuidadosa e atenciosa com meu pet.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="avaliacao">
+                        <img class="avaliador-foto" src="img/avaliadores/2-cropped.jpg"
+                            alt="Foto de perfil do avaliador">
+                        <div class="avaliacao-content">
+                            <div class="estrelas"><img src="img/icons/star.svg" alt="estrela"><img
+                                    src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
+                                    alt="estrela"><img src="img/icons/star.svg" alt="estrela"><img
+                                    src="img/icons/star.svg" alt="estrela"></div>
+                            <h2>Neymar Jr.</h2>
+                            <p>Não poderia estar mais feliz com o serviço desta clínica. Profissionais qualificados e
+                                atenciosos.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="avaliacao">
+                        <img class="avaliador-foto" src="img/avaliadores/3-cropped.jpg"
+                            alt="Foto de perfil do avaliador">
+                        <div class="avaliacao-content">
+                            <div class="estrelas"><img src="img/icons/star.svg" alt="estrela"><img
+                                    src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
+                                    alt="estrela"><img src="img/icons/star.svg" alt="estrela"><img
+                                    src="img/icons/star.svg" alt="estrela"></div>
+                            <h2>Josseana da Silva</h2>
+                            <p>Excelente clínica! Desde o primeiro contato, fui atendido com profissionalismo e
+                                gentileza.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <hr>
-                <div class="avaliacao">
-                    <img class="avaliador-foto" src="img/avaliadores/2-cropped.jpg" alt="Foto de perfil do avaliador">
-                    <div class="avaliacao-content">
-                        <div class="estrelas"><img src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
-                            alt="estrela"><img src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
-                            alt="estrela"><img src="img/icons/star.svg" alt="estrela"></div>
-                        <h2>Neymar Jr.</h2>
-                        <p>Não poderia estar mais feliz com o serviço desta clínica. Profissionais qualificados e
-                            atenciosos.</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="avaliacao">
-                    <img class="avaliador-foto" src="img/avaliadores/3-cropped.jpg" alt="Foto de perfil do avaliador">
-                    <div class="avaliacao-content">
-                        <div class="estrelas"><img src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
-                            alt="estrela"><img src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
-                            alt="estrela"><img src="img/icons/star.svg" alt="estrela"></div>
-                        <h2>Josseana da Silva</h2>
-                        <p>Excelente clínica! Desde o primeiro contato, fui atendido com profissionalismo e gentileza.
-                        </p>
-                    </div>
+                <div id="controles-avaliacoes">
+                    <button id="avaliacao-anterior">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.52 7.833 8.188 12.5 7 13.667.333 7 7 .333 8.187 1.5 3.521 6.167h10.146v1.666z" />
+                        </svg>
+                    </button>
+                    <span id="avaliacao-pagina">1</span>
+                    <button id="avaliacao-proxima">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.4792 6.16675L5.81252 1.50008L7.00002 0.333416L13.6667 7.00008L7.00002 13.6667L5.81252 12.5001L10.4792 7.83342L0.333355 7.83342L0.333355 6.16675L10.4792 6.16675Z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -332,7 +413,6 @@
                 </div>
                 <input type="submit">
             </form>
-
 
         </div>
     </section>
