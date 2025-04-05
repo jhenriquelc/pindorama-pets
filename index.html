@@ -218,6 +218,10 @@
         #controles-avaliacoes button:active svg {
             fill: #FFFFFF;
         }
+
+        .invisible {
+            visibility: hidden;
+        }
     </style>
 </head>
 
@@ -324,7 +328,7 @@
             <div class="pad-sides">
                 <h1>Avaliações</h1>
                 <div id="lista-avaliacoes">
-                    <div class="avaliacao">
+                    <div id="avaliacao1" class="avaliacao">
                         <img class="avaliador-foto" src="img/avaliadores/1-cropped.jpg"
                             alt="Foto de perfil do avaliador">
                         <div class="avaliacao-content">
@@ -337,7 +341,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="avaliacao">
+                    <div id="avaliacao2" class="avaliacao">
                         <img class="avaliador-foto" src="img/avaliadores/2-cropped.jpg"
                             alt="Foto de perfil do avaliador">
                         <div class="avaliacao-content">
@@ -351,7 +355,7 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="avaliacao">
+                    <div id="avaliacao3" class="avaliacao">
                         <img class="avaliador-foto" src="img/avaliadores/3-cropped.jpg"
                             alt="Foto de perfil do avaliador">
                         <div class="avaliacao-content">
@@ -367,7 +371,7 @@
                     </div>
                 </div>
                 <div id="controles-avaliacoes">
-                    <button id="avaliacao-anterior">
+                    <button id="avaliacao-anterior" class="invisible">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M3.52 7.833 8.188 12.5 7 13.667.333 7 7 .333 8.187 1.5 3.521 6.167h10.146v1.666z" />
@@ -443,6 +447,73 @@
             <p>UNECT JR - TODOS OS DIREITOS RESERVADOS</p>
         </div>
     </footer>
+
+    <script>
+        let avaliacoes = [
+            [
+                { nome: "Carlos Alberto", texto: "Atendimento excepcional! A equipe foi muito cuidadosa e atenciosa com meu pet." },
+                { nome: "Neymar Jr", texto: "Não poderia estar mais feliz com o serviço desta clínica. Profissionais qualificados e atenciosos." },
+                { nome: "Josseana da Silva", texto: "Excelente clínica! Desde o primeiro contato, fui atendido com profissionalismo e gentileza." }
+            ],
+            [
+                { nome: "João Henrique", texto: "Atendimento de primeira, cuidam muito bem dos animais e sempre explicam tudo com clareza." },
+                { nome: "Adamilton Jr", texto: "A clínica é muito bem equipada, e os profissionais são incríveis, mas o tempo de espera poderia ser menor." },
+                { nome: "Luciana da Silva", texto: "Profissionais capacitados e atenciosos, meu gato recebeu o melhor cuidado. Recomendo muito!" }
+            ],
+            [
+                { nome: "Matheus Brito", texto: "A equipe é super dedicada e o ambiente é acolhedor, perfeito para quem se importa com o bem-estar do pet." },
+                { nome: "Luiz Jr", texto: "Atendimento excelente e muito atencioso! Meu pet recebeu todo o cuidado necessário e ficou ótimo." },
+                { nome: "Clariane da Silva", texto: "Fiquei satisfeita com o atendimento, mas achei os preços um pouco altos para alguns serviços." }
+            ],
+        ];
+
+        let atualizar_avaliacoes = (pag) => {
+            document.getElementById("avaliacao-pagina").textContent = pag;
+            let avaliacoes_content = avaliacoes[pag - 1];
+            let avaliacoes_dom = document.getElementsByClassName("avaliacao");
+
+            for (let i = 0; i < 3; i++) {
+                let nome = avaliacoes_dom[i].getElementsByTagName("h2")[0]
+                let texto = avaliacoes_dom[i].getElementsByTagName("p")[0]
+
+                nome.textContent = avaliacoes_content[i].nome
+                texto.textContent = avaliacoes_content[i].texto
+            }
+
+        }
+
+        let pag_atual = 1;
+
+        document.getElementById("avaliacao-anterior").addEventListener('click', (event) => {
+            if (pag_atual <= 1) {
+                return;
+            }
+
+            pag_atual--;
+            if (pag_atual == 1) { // Impedir clicar botão voltar
+                document.getElementById("avaliacao-anterior").classList.add("invisible")
+            };
+            // Liberar botão avançar
+            document.getElementById("avaliacao-proxima").classList.remove("invisible")
+
+            atualizar_avaliacoes(pag_atual);
+        });
+
+        document.getElementById("avaliacao-proxima").addEventListener('click', (event) => {
+            if (pag_atual >= 3) {
+                return;
+            };
+
+            pag_atual++;
+            if (pag_atual == 3) { // Impedir clicar botão voltar
+                document.getElementById("avaliacao-proxima").classList.add("invisible")
+            };
+            // Liberar botão voltar
+            document.getElementById("avaliacao-anterior").classList.remove("invisible")
+
+            atualizar_avaliacoes(pag_atual);
+        });
+    </script>
 </body>
 
 </html>
