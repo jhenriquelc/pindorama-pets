@@ -92,13 +92,16 @@
             transition: 0.3s;
         }
 
+        .cabecalho a {
+            display: flex;
+        }
+
         .nav-links a {
             text-decoration: none;
             border-radius: 15px;
             color: #063643;
             transition: 0.3s;
             padding: 2px 4px;
-            display: flex;
         }
 
         .nav-links a:hover {
@@ -223,6 +226,62 @@
         .invisible {
             visibility: hidden;
         }
+
+        #card-entre-em-contato {
+            position: relative;
+            background: white;
+            max-width: 1180px;
+            width: calc(100% - 80px);
+            height: 450px;
+            border-radius: 8px;
+            border-width: 1px;
+            z-index: -1;
+            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        #card-entre-em-contato h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 50px;
+            margin-left: 50px;
+            max-width: 420px;
+        }
+
+        #card-entre-em-contato button {
+            background-color: #0F637A;
+            color: #F8F8FF;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            cursor: pointer;
+            margin-left: 50px;
+        }
+
+        #entre-contato-pets {
+            width: 717px;
+            height: 260px;
+            bottom: 38px;
+            right: 50px;
+            bottom: 40px;
+            position: absolute;
+        }
+
+        #secao1 {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #entre-contato-listras {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 50px;
+            right: 50px;
+        }
     </style>
 </head>
 
@@ -246,8 +305,8 @@
         <div id="card-entre-em-contato">
             <h1>Cuidando do Seu pet com Profissionalismo e Carinho</h1>
             <button>Entre em Contato</button>
-            <img src="img/pets.png" alt="Pets">
-            <img src="img/stripes.svg" alt="Listras">
+            <img id="entre-contato-pets" src="img/pets.png" alt="Pets">
+            <img id="entre-contato-listras" src="img/stripes.svg" alt="Listras">
         </div>
         <div id="carrousel">
             <div id="carrousel-1" class="carrousel-card">
