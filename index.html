@@ -71,7 +71,8 @@
             position: sticky;
             height: 140px;
             filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
-            border: rgba(0, 0, 0, 0.1)
+            border: rgba(0, 0, 0, 0.1);
+            z-index: 99;
         }
 
         #cabecalho {
@@ -229,13 +230,12 @@
 
         #card-entre-em-contato {
             position: relative;
-            background: white;
+            background: #F8F8FF;
             max-width: 1180px;
             width: calc(100% - 80px);
             height: 450px;
             border-radius: 8px;
             border-width: 1px;
-            z-index: -1;
             filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
         }
 
@@ -247,7 +247,7 @@
             max-width: 420px;
         }
 
-        #card-entre-em-contato button {
+        #card-entre-em-contato a {
             background-color: #0F637A;
             color: #F8F8FF;
             border: none;
@@ -258,6 +258,13 @@
             font-size: 28px;
             cursor: pointer;
             margin-left: 50px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        #card-entre-em-contato a:hover {
+            background-color: #7CCBE0 !important;
+            color: #063643 !important;
         }
 
         #entre-contato-pets {
@@ -267,6 +274,7 @@
             right: 50px;
             bottom: 40px;
             position: absolute;
+            z-index: -1;
         }
 
         #secao1 {
@@ -281,6 +289,7 @@
             height: 150px;
             top: 50px;
             right: 50px;
+            z-index: -1;
         }
     </style>
 </head>
@@ -304,7 +313,7 @@
     <section id="secao1">
         <div id="card-entre-em-contato">
             <h1>Cuidando do Seu pet com Profissionalismo e Carinho</h1>
-            <button>Entre em Contato</button>
+            <a href="#contato-card">Entre em Contato</a>
             <img id="entre-contato-pets" src="img/pets.png" alt="Pets">
             <img id="entre-contato-listras" src="img/stripes.svg" alt="Listras">
         </div>
