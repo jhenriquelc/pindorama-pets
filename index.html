@@ -50,6 +50,7 @@
         .carousel-card p {
             font-family: 'Poppins', sans-serif;
             font-size: 20px;
+            margin-top: 0px;
         }
 
         #contato-form label {
@@ -274,7 +275,7 @@
             right: 50px;
             bottom: 40px;
             position: absolute;
-            z-index: -1;
+            z-index: inherit;
         }
 
         #secao1 {
@@ -290,14 +291,11 @@
             height: 150px;
             top: 50px;
             right: 50px;
-            z-index: -1;
+            z-index: inherit;
         }
 
         #carousel-view {
-            /* max-width: 1180px;
-            width: calc(100% - 80px); */
             width: 100%;
-            height: 450px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -308,7 +306,24 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            z-index: -1;
+            z-index: inherit;
+            border-radius: 8px;
+            background: #F8F8FF;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .carousel-card h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            padding: 0;
+        }
+
+        .carousel-card p {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 20px;
         }
 
         #carousel-card-container {
@@ -316,7 +331,6 @@
             position: relative;
             display: block;
             height: 300px;
-            z-index: -2;
         }
 
         .gone {
@@ -348,7 +362,7 @@
             fill: #63B3C9;
         }
 
-        #carousel-view button {
+        #carousel-view>button {
             background-color: transparent;
             border: none;
             cursor: pointer;
@@ -361,6 +375,77 @@
             justify-content: center;
         }
 
+        #carousel-1 {
+            background: #63B3C9;
+            border: none;
+        }
+
+        #carousel-1-layout {
+            height: calc(100% - 40px);
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            padding: 20px 40px;
+        }
+
+        #carousel-1-esquerda {
+            position: relative;
+            width: 400px;
+            height: 100%;
+        }
+
+        #carousel-1-direita {
+            position: relative;
+            width: 400px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: left;
+            align-items: left; */
+        }
+
+        #carousel-1-gato {
+            position: absolute;
+            bottom: 4px;
+            right: 16px;
+        }
+
+        #carousel-1 button {
+            background-color: #F8F8FF;
+            color: #063643;
+            border: none;
+            padding: 10px 20px;
+            width: 280px;
+            height: 72px;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #carousel-1-pegada-superior {
+            position: absolute;
+            z-index: inherit;
+            top: 0px;
+            left: 0px;
+        }
+
+        #carousel-1-vacina {
+            position: absolute;
+            z-index: inherit;
+            top: 50px;
+            left: 80px;
+        }
+
+        #carousel-1-pegada-inferior {
+            position: absolute;
+            z-index: inherit;
+            bottom: 0px;
+            left: 150px;
+        }
     </style>
 </head>
 
@@ -392,12 +477,19 @@
                 <button id="carousel-anterior"><img src="img/icons/arrow-left.svg" alt="Botão card anterior"></button>
                 <div id="carousel-card-container">
                     <div id="carousel-1" class="carousel-card">
-                        <h1>Campanha de vacinção</h1>
-                        <p>Nos dias 19 a 28 de Novembro</p>
-                        <button>Saiba Mais</button>
-                        <img src="img/pata.svg" alt="Pegada de pet" id="pegada-superior">
-                        <img src="img/vacina.svg" alt="Agulha de vacina">
-                        <img src="img/pata.svg" alt="Pegada de pet" id="pegada-inferior">
+                        <div id="carousel-1-layout">
+                            <div id="carousel-1-esquerda">
+                                <img src="img/pata.svg" alt="Pegada de pet" id="carousel-1-pegada-superior">
+                                <img src="img/vacina.svg" alt="Agulha de vacina" id="carousel-1-vacina">
+                                <img src="img/pata.svg" alt="Pegada de pet" id="carousel-1-pegada-inferior">
+                            </div>
+                            <div id="carousel-1-direita">
+                                <h1>Campanha de vacinação</h1>
+                                <p>Nos dias 19 a 28 de Novembro</p>
+                                <button>Saiba Mais</button>
+                            </div>
+                        </div>
+                        <img src="img/gato-silhueta.svg" alt="Silhueta de gato" id="carousel-1-gato">
                     </div>
                     <div id="carousel-2" class="carousel-card gone">
                         <h1>Campanha de adoção</h1>
@@ -618,8 +710,8 @@
         // Adiciona módulo para número (funciona diferente de % para números negativos)
         // Exemplo: -1 % 3 = -1, mas -1.mod(3) = 2
         Number.prototype.mod = function (n) {
-        "use strict";
-        return ((this % n) + n) % n;
+            "use strict";
+            return ((this % n) + n) % n;
         };
 
         // AVALIAÇÕES
