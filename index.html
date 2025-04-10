@@ -326,6 +326,21 @@
             font-size: 20px;
         }
 
+        .carousel-card button {
+            background-color: #F8F8FF;
+            color: #063643;
+            border: none;
+            padding: 10px 20px;
+            width: 280px;
+            height: 72px;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
         #carousel-card-container {
             flex-grow: 1;
             position: relative;
@@ -446,6 +461,40 @@
             bottom: 0px;
             left: 150px;
         }
+
+        #carousel-2 {
+            background-image: url('img/bg-adocao.png');
+            background-size: 1140px;
+            background-position: center;
+            background-color: #063643;
+            display: flex;
+            color: #FFFFFF;
+        }
+
+        #carousel-2-cachorro {
+            width: 200px;
+            height: 211px;
+            object-fit: cover;
+            flex-grow: 0;
+            align-self: flex-end;
+        }
+
+        #carousel-2-gato {
+            justify-self: flex-end;
+            align-self: center;
+        }
+
+        #carousel-2-texto {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 40px;
+            padding-right: 0;
+        }
+
+        #carousel-2 button {
+            height: 62px;
+        }
+
     </style>
 </head>
 
@@ -492,15 +541,15 @@
                         <img src="img/gato-silhueta.svg" alt="Silhueta de gato" id="carousel-1-gato">
                     </div>
                     <div id="carousel-2" class="carousel-card gone">
-                        <h1>Campanha de adoção</h1>
-                        <p>Dê um lar cheio de amor a quem só quer te fazer feliz! Adote um amigo de quatro patas e
-                            transforme
-                            sua vida e a dele.</p>
-                        <button>Saiba Mais</button>
-                        <img src="img/bg-adocao.png" alt="Fundo do card de adoção">
-                        <!-- TODO: Adicionar fundo como imagem ou como bg no CSS? -->
-                        <img src="img/cao-adocao.png" alt="Cachorrinho">
-                        <img src="img/gato-adocao.png" alt="Gato olhando pela borda da parede">
+                        <div id="carousel-2-texto">
+                            <h1>Campanha de adoção</h1>
+                            <p>Dê um lar cheio de amor a quem só quer te fazer feliz! Adote um amigo de quatro patas e
+                                transforme
+                                sua vida e a dele.</p>
+                            <button>Saiba Mais</button>
+                        </div>
+                        <img id="carousel-2-cachorro" src="img/cao-adocao.png" alt="Cachorrinho">
+                        <img id="carousel-2-gato" src="img/gato-adocao.png" alt="Gato olhando pela borda da parede">
                     </div>
                     <div id="carousel-3" class="carousel-card gone">
                         <h1>Campanha de adoção</h1>
