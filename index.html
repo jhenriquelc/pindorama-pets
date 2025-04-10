@@ -518,6 +518,7 @@
     </footer>
 
     <script>
+        // AVALIAÇÕES
         let avaliacoes = [
             [
                 { nome: "Carlos Alberto", texto: "Atendimento excepcional! A equipe foi muito cuidadosa e atenciosa com meu pet." },
@@ -536,10 +537,11 @@
             ],
         ];
 
+        numero_pagina_dom = document.getElementById("avaliacao-pagina");
+        let avaliacoes_dom = document.getElementsByClassName("avaliacao");
         let atualizar_avaliacoes = (pag) => {
-            document.getElementById("avaliacao-pagina").textContent = pag;
+            numero_pagina_dom.textContent = pag;
             let avaliacoes_content = avaliacoes[pag - 1];
-            let avaliacoes_dom = document.getElementsByClassName("avaliacao");
 
             for (let i = 0; i < 3; i++) {
                 let nome = avaliacoes_dom[i].getElementsByTagName("h2")[0]
@@ -582,6 +584,7 @@
 
             atualizar_avaliacoes(pag_atual);
         });
+        // FIM AVALIAÇÕES
     </script>
 </body>
 
