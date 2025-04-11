@@ -495,6 +495,42 @@
             height: 62px;
         }
 
+        #carousel-3-layout {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #carousel-3-texto {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 40px;
+            padding-right: 0;
+        }
+
+        #carousel-3>img {
+            position: absolute;
+            z-index: -1;
+        }
+
+        #carousel-3-chuva {
+            top: 0;
+            right: 0;
+        }
+
+        #carousel-3-guarda-chuva {
+            top: 0;
+            left: 0;
+        }
+
+        #carousel-3-gato {
+            padding-right: 10px;
+        }
+
+        #carousel-3 button {
+            background-color: #063643;
+            color: #F8F8FF;
+            padding-left: 30px;
+        }
     </style>
 </head>
 
@@ -552,13 +588,18 @@
                         <img id="carousel-2-gato" src="img/gato-adocao.png" alt="Gato olhando pela borda da parede">
                     </div>
                     <div id="carousel-3" class="carousel-card gone">
-                        <h1>Campanha de adoção</h1>
-                        <p>Nossa clínica dispõe do serviço de higiene para seu pet permanecer limpo, cheiroso e longe de
-                            parasitas.</p>
-                        <button>Saiba Mais</button>
-                        <img src="img/gato-banho.png" alt="Gato segurando utensílios de banho">
-                        <img src="img/chuva.png" alt="Gotas caindo">
-                        <img src="img/guarda-sol-crop.png" alt="Guarda-sol">
+                        <div id="carousel-3-layout">
+                            <div id="carousel-3-texto">
+                                <h1>Banho e toda: cuidado e saúde para seu pet</h1>
+                                <p>Nossa clínica dispõe do serviço de higiene para seu pet permanecer limpo, cheiroso e
+                                    longe de
+                                    parasitas.</p>
+                                <button>Saiba Mais</button>
+                            </div>
+                            <img id="carousel-3-gato" src="img/gato-banho.png" alt="Gato segurando utensílios de banho">
+                        </div>
+                        <img id="carousel-3-chuva" src="img/chuva.png" alt="Gotas caindo">
+                        <img id="carousel-3-guarda-chuva" src="img/guarda-sol-crop.png" alt="Guarda-sol">
                     </div>
                 </div>
                 <button id="carousel-proximo"><img src="img/icons/arrow-right.svg" alt="Botão próximo card"></button>
