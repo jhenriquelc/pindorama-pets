@@ -29,6 +29,7 @@
             font-weight: 700;
             font-size: 24px;
             line-height: 100%;
+            padding-bottom: 30px;
         }
 
         h2 {
@@ -38,13 +39,18 @@
             line-height: 100%;
         }
 
+        svg {
+            fill: #063643;
+        }
+
         #card-entre-em-contato h1 {
             font-size: 28px;
         }
 
-        .carrousel-card p {
+        .carousel-card p {
             font-family: 'Poppins', sans-serif;
             font-size: 20px;
+            margin-top: 0px;
         }
 
         #contato-form label {
@@ -66,7 +72,8 @@
             position: sticky;
             height: 140px;
             filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
-            border: rgba(0, 0, 0, 0.1)
+            border: rgba(0, 0, 0, 0.1);
+            z-index: 99;
         }
 
         #cabecalho {
@@ -87,6 +94,10 @@
             transition: 0.3s;
         }
 
+        .cabecalho a {
+            display: flex;
+        }
+
         .nav-links a {
             text-decoration: none;
             border-radius: 15px;
@@ -97,6 +108,429 @@
 
         .nav-links a:hover {
             background-color: rgba(107, 183, 203, 0.4);
+        }
+
+        section {
+            padding: 40px 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+        }
+
+        #secao3 {
+            max-width: 1140px;
+            padding: 40px 0;
+            margin: 0 auto;
+        }
+
+        #avaliacoes {
+            max-width: 1140px;
+            width: 100%;
+        }
+
+        .estrelas {
+            display: flex;
+            gap: 8px
+        }
+
+        .avaliacao {
+            display: flex;
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+
+        .avaliador-foto {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            object-fit: cover;
+            align-self: center;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+
+        .pad-sides {
+            padding: 0 40px;
+        }
+
+        .avaliacao-content {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .avaliacao-content * {
+            margin: 0px;
+        }
+
+        .avaliacao h2 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        .avaliacao p {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        #avaliacoes hr {
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            /* 1px em border gera uma linha de 2px */
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        #controles-avaliacoes {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            padding-top: 50px;
+            gap: 20px;
+        }
+
+        #controles-avaliacoes button {
+            background-color: transparent;
+            border: 1px solid #063643;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 30px;
+            border-radius: 8px;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #controles-avaliacoes button svg {
+            transition: 0.3s;
+        }
+
+        #controles-avaliacoes button:hover {
+            background-color: #6BB7CB;
+        }
+
+        #controles-avaliacoes button:active {
+            background-color: #063643;
+            color: #FFFFFF;
+        }
+
+        #controles-avaliacoes button:active svg {
+            fill: #FFFFFF;
+        }
+
+        .invisible {
+            visibility: hidden;
+        }
+
+        #card-entre-em-contato {
+            position: relative;
+            background: #F8F8FF;
+            max-width: 1180px;
+            width: calc(100% - 80px);
+            height: 450px;
+            border-radius: 8px;
+            border-width: 1px;
+            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        #card-entre-em-contato h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 50px;
+            margin-left: 50px;
+            max-width: 420px;
+        }
+
+        #card-entre-em-contato a {
+            background-color: #0F637A;
+            color: #F8F8FF;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            cursor: pointer;
+            margin-left: 50px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        #card-entre-em-contato a:hover {
+            background-color: #7CCBE0 !important;
+            color: #063643 !important;
+        }
+
+        #entre-contato-pets {
+            width: 717px;
+            height: 260px;
+            bottom: 38px;
+            right: 50px;
+            bottom: 40px;
+            position: absolute;
+            z-index: inherit;
+        }
+
+        #secao1 {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        #entre-contato-listras {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 50px;
+            right: 50px;
+            z-index: inherit;
+        }
+
+        #carousel-view {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-card {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            z-index: inherit;
+            border-radius: 8px;
+            background: #F8F8FF;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        .carousel-card h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            padding: 0;
+        }
+
+        .carousel-card p {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .carousel-card button {
+            background-color: #F8F8FF;
+            color: #063643;
+            border: none;
+            padding: 10px 20px;
+            width: 280px;
+            height: 72px;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #carousel-card-container {
+            flex-grow: 1;
+            position: relative;
+            display: block;
+            height: 300px;
+        }
+
+        .gone {
+            opacity: 0%;
+            z-index: -2;
+        }
+
+        #carousel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 1180px;
+            width: calc(100% - 80px);
+        }
+
+        #carousel-indicators {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .carousel-indicator {
+            transition: 0.3s;
+            fill: #A3A3A3;
+        }
+
+        .active-carousel-indicator {
+            fill: #63B3C9;
+        }
+
+        #carousel-view>button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #carousel-1 {
+            background: #63B3C9;
+            border: none;
+        }
+
+        #carousel-1-layout {
+            height: calc(100% - 40px);
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            padding: 20px 40px;
+        }
+
+        #carousel-1-esquerda {
+            position: relative;
+            width: 400px;
+            height: 100%;
+        }
+
+        #carousel-1-direita {
+            position: relative;
+            width: 400px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: left;
+            align-items: left; */
+        }
+
+        #carousel-1-gato {
+            position: absolute;
+            bottom: 4px;
+            right: 16px;
+        }
+
+        #carousel-1 button {
+            background-color: #F8F8FF;
+            color: #063643;
+            border: none;
+            padding: 10px 20px;
+            width: 280px;
+            height: 72px;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #carousel-1-pegada-superior {
+            position: absolute;
+            z-index: inherit;
+            top: 0px;
+            left: 0px;
+        }
+
+        #carousel-1-vacina {
+            position: absolute;
+            z-index: inherit;
+            top: 50px;
+            left: 80px;
+        }
+
+        #carousel-1-pegada-inferior {
+            position: absolute;
+            z-index: inherit;
+            bottom: 0px;
+            left: 150px;
+        }
+
+        #carousel-2 {
+            background-image: url('img/bg-adocao.png');
+            background-size: 1140px;
+            background-position: center;
+            background-color: #063643;
+            display: flex;
+            color: #FFFFFF;
+        }
+
+        #carousel-2-cachorro {
+            width: 200px;
+            height: 211px;
+            object-fit: cover;
+            flex-grow: 0;
+            align-self: flex-end;
+        }
+
+        #carousel-2-gato {
+            justify-self: flex-end;
+            align-self: center;
+        }
+
+        #carousel-2-texto {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 40px;
+            padding-right: 0;
+        }
+
+        #carousel-2 button {
+            height: 62px;
+        }
+
+        #carousel-3-layout {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #carousel-3-texto {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 40px;
+            padding-right: 0;
+        }
+
+        #carousel-3>img {
+            position: absolute;
+            z-index: -1;
+        }
+
+        #carousel-3-chuva {
+            top: 0;
+            right: 0;
+        }
+
+        #carousel-3-guarda-chuva {
+            top: 0;
+            left: 0;
+        }
+
+        #carousel-3-gato {
+            padding-right: 10px;
+        }
+
+        #carousel-3 button {
+            background-color: #063643;
+            color: #F8F8FF;
+            padding-left: 30px;
         }
 
         #secao2 {
@@ -142,7 +576,6 @@
             flex-direction: row;
             max-width: 1140px;
         }
-
     </style>
 </head>
 
@@ -165,37 +598,70 @@
     <section id="secao1">
         <div id="card-entre-em-contato">
             <h1>Cuidando do Seu pet com Profissionalismo e Carinho</h1>
-            <button>Entre em Contato</button>
-            <img src="img/pets.png" alt="Pets">
-            <img src="img/stripes.svg" alt="Listras">
+            <a href="#contato-card">Entre em Contato</a>
+            <img id="entre-contato-pets" src="img/pets.png" alt="Pets">
+            <img id="entre-contato-listras" src="img/stripes.svg" alt="Listras">
         </div>
-        <div id="carrousel">
-            <div id="carrousel-1" class="carrousel-card">
-                <h1>Campanha de vacinção</h1>
-                <p>Nos dias 19 a 28 de Novembro</p>
-                <button>Saiba Mais</button>
-                <img src="img/pata.svg" alt="Pegada de pet" id="pegada-superior">
-                <img src="img/vacina.svg" alt="Agulha de vacina">
-                <img src="img/pata.svg" alt="Pegada de pet" id="pegada-inferior">
+        <div id="carousel">
+            <div id="carousel-view">
+                <button id="carousel-anterior"><img src="img/icons/arrow-left.svg" alt="Botão card anterior"></button>
+                <div id="carousel-card-container">
+                    <div id="carousel-1" class="carousel-card">
+                        <div id="carousel-1-layout">
+                            <div id="carousel-1-esquerda">
+                                <img src="img/pata.svg" alt="Pegada de pet" id="carousel-1-pegada-superior">
+                                <img src="img/vacina.svg" alt="Agulha de vacina" id="carousel-1-vacina">
+                                <img src="img/pata.svg" alt="Pegada de pet" id="carousel-1-pegada-inferior">
+                            </div>
+                            <div id="carousel-1-direita">
+                                <h1>Campanha de vacinação</h1>
+                                <p>Nos dias 19 a 28 de Novembro</p>
+                                <button>Saiba Mais</button>
+                            </div>
+                        </div>
+                        <img src="img/gato-silhueta.svg" alt="Silhueta de gato" id="carousel-1-gato">
+                    </div>
+                    <div id="carousel-2" class="carousel-card gone">
+                        <div id="carousel-2-texto">
+                            <h1>Campanha de adoção</h1>
+                            <p>Dê um lar cheio de amor a quem só quer te fazer feliz! Adote um amigo de quatro patas e
+                                transforme
+                                sua vida e a dele.</p>
+                            <button>Saiba Mais</button>
+                        </div>
+                        <img id="carousel-2-cachorro" src="img/cao-adocao.png" alt="Cachorrinho">
+                        <img id="carousel-2-gato" src="img/gato-adocao.png" alt="Gato olhando pela borda da parede">
+                    </div>
+                    <div id="carousel-3" class="carousel-card gone">
+                        <div id="carousel-3-layout">
+                            <div id="carousel-3-texto">
+                                <h1>Banho e toda: cuidado e saúde para seu pet</h1>
+                                <p>Nossa clínica dispõe do serviço de higiene para seu pet permanecer limpo, cheiroso e
+                                    longe de
+                                    parasitas.</p>
+                                <button>Saiba Mais</button>
+                            </div>
+                            <img id="carousel-3-gato" src="img/gato-banho.png" alt="Gato segurando utensílios de banho">
+                        </div>
+                        <img id="carousel-3-chuva" src="img/chuva.png" alt="Gotas caindo">
+                        <img id="carousel-3-guarda-chuva" src="img/guarda-sol-crop.png" alt="Guarda-sol">
+                    </div>
+                </div>
+                <button id="carousel-proximo"><img src="img/icons/arrow-right.svg" alt="Botão próximo card"></button>
             </div>
-            <div id="carrousel-2" class="carrousel-card">
-                <h1>Campanha de adoção</h1>
-                <p>Dê um lar cheio de amor a quem só quer te fazer feliz! Adote um amigo de quatro patas e transforme
-                    sua vida e a dele.</p>
-                <button>Saiba Mais</button>
-                <img src="img/bg-adocao.png" alt="Fundo do card de adoção">
-                <!-- TODO: Adicionar fundo como imagem ou como bg no CSS? -->
-                <img src="img/cao-adocao.png" alt="Cachorrinho">
-                <img src="img/gato-adocao.png" alt="Gato olhando pela borda da parede">
-            </div>
-            <div id="carrousel-3" class="carrousel-card">
-                <h1>Campanha de adoção</h1>
-                <p>Nossa clínica dispõe do serviço de higiene para seu pet permanecer limpo, cheiroso e longe de
-                    parasitas.</p>
-                <button>Saiba Mais</button>
-                <img src="img/gato-banho.png" alt="Gato segurando utensílios de banho">
-                <img src="img/chuva.png" alt="Gotas caindo">
-                <img src="img/guarda-sol-crop.png" alt="Guarda-sol">
+            <div id="carousel-indicators">
+                <svg class="carousel-indicator active-carousel-indicator" width="21" height="20" viewBox="0 0 21 20"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="10.5001" cy="10" rx="10.0926" ry="10" />
+                </svg>
+                <svg class=" carousel-indicator" width="21" height="20" viewBox="0 0 21 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="10.5001" cy="10" rx="10.0926" ry="10" />
+                </svg>
+                <svg class=" carousel-indicator" width="21" height="20" viewBox="0 0 21 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="10.5001" cy="10" rx="10.0926" ry="10" />
+                </svg>
             </div>
         </div>
     </section>
@@ -212,7 +678,7 @@
         </div>
         <div id="nossos-servicos">
 
-            
+
             <h1>Nossos Serviços</h1>
             <div class="hoz-layout">
                 <img id="veterinaria-gato" src="img/veterinaria-gato.png" alt="Veterinária cuidando de um gato">
@@ -255,24 +721,65 @@
             </div>
         </div>
         <div id="avaliacoes">
-            <h1>Avaliações</h1>
-            <div id="lista-avaliacoes">
-                <div class="avaliacao">
-                    <img src="img/avaliadores/1.png" alt="Foto de perfil do avaliador"> <span class="estrelas"></span>
-                    <h2>Carlos Alberto</h2>
-                    <p>Atendimento excepcional! A equipe foi muito cuidadosa e atenciosa com meu pet.</p>
+            <div class="pad-sides">
+                <h1>Avaliações</h1>
+                <div id="lista-avaliacoes">
+                    <div id="avaliacao1" class="avaliacao">
+                        <img class="avaliador-foto" src="img/avaliadores/1-cropped.jpg"
+                            alt="Foto de perfil do avaliador">
+                        <div class="avaliacao-content">
+                            <div class="estrelas"><img src="img/icons/star.svg" alt="estrela"><img
+                                    src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
+                                    alt="estrela"><img src="img/icons/star.svg" alt="estrela"><img
+                                    src="img/icons/star.svg" alt="estrela"></div>
+                            <h2>Carlos Alberto</h2>
+                            <p>Atendimento excepcional! A equipe foi muito cuidadosa e atenciosa com meu pet.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="avaliacao2" class="avaliacao">
+                        <img class="avaliador-foto" src="img/avaliadores/2-cropped.jpg"
+                            alt="Foto de perfil do avaliador">
+                        <div class="avaliacao-content">
+                            <div class="estrelas"><img src="img/icons/star.svg" alt="estrela"><img
+                                    src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
+                                    alt="estrela"><img src="img/icons/star.svg" alt="estrela"><img
+                                    src="img/icons/star.svg" alt="estrela"></div>
+                            <h2>Neymar Jr.</h2>
+                            <p>Não poderia estar mais feliz com o serviço desta clínica. Profissionais qualificados e
+                                atenciosos.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id="avaliacao3" class="avaliacao">
+                        <img class="avaliador-foto" src="img/avaliadores/3-cropped.jpg"
+                            alt="Foto de perfil do avaliador">
+                        <div class="avaliacao-content">
+                            <div class="estrelas"><img src="img/icons/star.svg" alt="estrela"><img
+                                    src="img/icons/star.svg" alt="estrela"><img src="img/icons/star.svg"
+                                    alt="estrela"><img src="img/icons/star.svg" alt="estrela"><img
+                                    src="img/icons/star.svg" alt="estrela"></div>
+                            <h2>Josseana da Silva</h2>
+                            <p>Excelente clínica! Desde o primeiro contato, fui atendido com profissionalismo e
+                                gentileza.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="avaliacao">
-                    <img src="img/avaliadores/2.png" alt="Foto de perfil do avaliador"> <span class="estrelas"></span>
-                    <h2>Neymar Jr.</h2>
-                    <p>Não poderia estar mais feliz com o serviço desta clínica. Profissionais qualificados e
-                        atenciosos.</p>
-                </div>
-                <div class="avaliacao">
-                    <img src="img/avaliadores/3.png" alt="Foto de perfil do avaliador"> <span class="estrelas"></span>
-                    <h2>Josseana da Silva</h2>
-                    <p>Excelente clínica! Desde o primeiro contato, fui atendido com profissionalismo e gentileza.
-                    </p>
+                <div id="controles-avaliacoes">
+                    <button id="avaliacao-anterior" class="invisible">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.52 7.833 8.188 12.5 7 13.667.333 7 7 .333 8.187 1.5 3.521 6.167h10.146v1.666z" />
+                        </svg>
+                    </button>
+                    <span id="avaliacao-pagina">1</span>
+                    <button id="avaliacao-proxima">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.4792 6.16675L5.81252 1.50008L7.00002 0.333416L13.6667 7.00008L7.00002 13.6667L5.81252 12.5001L10.4792 7.83342L0.333355 7.83342L0.333355 6.16675L10.4792 6.16675Z" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -310,7 +817,6 @@
                 <input type="submit">
             </form>
 
-
         </div>
     </section>
     <footer id="rodape">
@@ -337,6 +843,110 @@
             <p>UNECT JR - TODOS OS DIREITOS RESERVADOS</p>
         </div>
     </footer>
+
+    <script>
+        // Adiciona módulo para número (funciona diferente de % para números negativos)
+        // Exemplo: -1 % 3 = -1, mas -1.mod(3) = 2
+        Number.prototype.mod = function (n) {
+            "use strict";
+            return ((this % n) + n) % n;
+        };
+
+        // AVALIAÇÕES
+        let avaliacoes = [
+            [
+                { nome: "Carlos Alberto", texto: "Atendimento excepcional! A equipe foi muito cuidadosa e atenciosa com meu pet." },
+                { nome: "Neymar Jr", texto: "Não poderia estar mais feliz com o serviço desta clínica. Profissionais qualificados e atenciosos." },
+                { nome: "Josseana da Silva", texto: "Excelente clínica! Desde o primeiro contato, fui atendido com profissionalismo e gentileza." }
+            ],
+            [
+                { nome: "João Henrique", texto: "Atendimento de primeira, cuidam muito bem dos animais e sempre explicam tudo com clareza." },
+                { nome: "Adamilton Jr", texto: "A clínica é muito bem equipada, e os profissionais são incríveis, mas o tempo de espera poderia ser menor." },
+                { nome: "Luciana da Silva", texto: "Profissionais capacitados e atenciosos, meu gato recebeu o melhor cuidado. Recomendo muito!" }
+            ],
+            [
+                { nome: "Matheus Brito", texto: "A equipe é super dedicada e o ambiente é acolhedor, perfeito para quem se importa com o bem-estar do pet." },
+                { nome: "Luiz Jr", texto: "Atendimento excelente e muito atencioso! Meu pet recebeu todo o cuidado necessário e ficou ótimo." },
+                { nome: "Clariane da Silva", texto: "Fiquei satisfeita com o atendimento, mas achei os preços um pouco altos para alguns serviços." }
+            ],
+        ];
+
+        numero_pagina_dom = document.getElementById("avaliacao-pagina");
+        let avaliacoes_dom = document.getElementsByClassName("avaliacao");
+        let atualizar_avaliacoes = (pag) => {
+            numero_pagina_dom.textContent = pag;
+            let avaliacoes_content = avaliacoes[pag - 1];
+
+            for (let i = 0; i < 3; i++) {
+                let nome = avaliacoes_dom[i].getElementsByTagName("h2")[0]
+                let texto = avaliacoes_dom[i].getElementsByTagName("p")[0]
+
+                nome.textContent = avaliacoes_content[i].nome
+                texto.textContent = avaliacoes_content[i].texto
+            }
+
+        }
+
+        let pag_atual = 1;
+
+        document.getElementById("avaliacao-anterior").addEventListener('click', (event) => {
+            if (pag_atual <= 1) {
+                return;
+            }
+
+            pag_atual--;
+            if (pag_atual == 1) { // Impedir clicar botão voltar
+                document.getElementById("avaliacao-anterior").classList.add("invisible")
+            };
+            // Liberar botão avançar
+            document.getElementById("avaliacao-proxima").classList.remove("invisible")
+
+            atualizar_avaliacoes(pag_atual);
+        });
+
+        document.getElementById("avaliacao-proxima").addEventListener('click', (event) => {
+            if (pag_atual >= 3) {
+                return;
+            };
+
+            pag_atual++;
+            if (pag_atual == 3) { // Impedir clicar botão voltar
+                document.getElementById("avaliacao-proxima").classList.add("invisible")
+            };
+            // Liberar botão voltar
+            document.getElementById("avaliacao-anterior").classList.remove("invisible")
+
+            atualizar_avaliacoes(pag_atual);
+        });
+        // FIM AVALIAÇÕES
+
+        // CAROUSEL
+        let carousel_cards_dom = document.getElementsByClassName("carousel-card");
+        let carousel_indicators_dom = document.getElementsByClassName("carousel-indicator");
+        let atualizar_carousel = (card_i) => {
+            for (let i = 0; i < carousel_cards_dom.length; i++) {
+                if (i == card_i) {
+                    carousel_cards_dom[i].classList.remove("gone");
+                    carousel_indicators_dom[i].classList.add("active-carousel-indicator");
+                } else {
+                    carousel_cards_dom[i].classList.add("gone");
+                    carousel_indicators_dom[i].classList.remove("active-carousel-indicator");
+                }
+            }
+        }
+
+        document.getElementById("carousel-anterior").addEventListener('click', (event) => {
+            card_atual = (card_atual - 1).mod(carousel_cards_dom.length);
+            atualizar_carousel(card_atual);
+        });
+        document.getElementById("carousel-proximo").addEventListener('click', (event) => {
+            card_atual = (card_atual + 1).mod(carousel_cards_dom.length);
+            atualizar_carousel(card_atual);
+        });
+        let card_atual = 0;
+        atualizar_carousel(card_atual);
+        // FIM CAROUSEL
+    </script>
 </body>
 
 </html>
