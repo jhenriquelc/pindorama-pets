@@ -530,10 +530,107 @@
             color: #F8F8FF;
             padding-left: 30px;
         }
-
+      
         #carousel-3 button:hover {
             background-color: #7CCBE0;
             color: #063643;
+        }
+
+        #secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(img/fundo-animais.png);
+            width: 100%;
+            padding: 0;
+        }
+
+        #secao2 h1 {
+            margin: 0;
+            padding: 40px 0 20px 0;
+        }
+
+        #veterinaria-gato {
+            width: 320px;
+            height: 260px;
+            border-radius: 8px;
+            border-width: 1px;
+            border-color: #63B3C9;
+            object-fit: cover;
+        }
+
+        #veterinaria-cachorro {
+            width: 320px;
+            height: 260px;
+            border-radius: 8px;
+            border-width: 1px;
+            object-fit: cover;
+        }
+
+        #logo-square {
+            width: 300px;
+            height: 300px;
+            left: 459px;
+
+        }
+
+        #quem-somos {
+            background-color: #89C5D5;
+            background-image: inherit;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #quem-somos-content {
+            display: flex;
+            flex-direction: row;
+            width: calc(100% - 80px);
+            max-width: 1140px;
+            padding: 20px 0;
+        }
+
+        #nossos-servicos {
+            background-image: inherit;
+            width: 100%;
+        }
+
+        #nossos-servicos-bg-1 {
+            width: 100%;
+            background-color: #63B3C9;
+            background-image: inherit;
+            display: flex;
+            justify-content: center;
+        }
+
+        #nossos-servicos-content-1 {
+            width: calc(100% - 80px);
+            max-width: 1140px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #nossos-servicos-content-2 {
+            display: flex;
+            justify-content: center;
+            width: calc(100% - 80px);
+        }
+
+        #nossos-servicos-bg-2 {
+            width: 100%;
+            background-color: #89C5D5;
+            background-image: inherit;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hoz-layout {
+            display: flex;
+            flex-direction: row;
+            max-width: 1140px;
+            gap: 28px;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -623,32 +720,45 @@
             </div>
         </div>
     </section>
-    <section id=" secao2">
+    <section id="secao2">
         <div id="quem-somos">
-            <img src="img/logo-square.svg" alt="Logo Pindorama Pets">
-            <h1>Quem Somos</h1>
-            <p>Nossa clínica veterinária é comprometida com o cuidado e bem-estar de cada pet,
-                com uma equipe
-                dedicada e
-                instalações modernas, buscamos garantir saúde e conforto em cada atendimento.
-                Cuidamos do seu
-                animalzinho como se fosse nosso!</p>
+            <div id="quem-somos-content">
+                <img id="logo-square" src="img/logo-square.svg" alt="Logo Pindorama Pets">
+                <div>
+                    <h1>Quem somos?</h1>
+                    <p>Nossa clínica veterinária é comprometida com o cuidado e bem-estar de cada pet, com uma equipe
+                        dedicada e
+                        instalações modernas, buscamos garantir saúde e conforto em cada atendimento. Cuidamos do seu
+                        animalzinho como se fosse nosso!</p>
+                </div>
+            </div>
         </div>
         <div id="nossos-servicos">
-            <h1>Nossos Serviços</h1>
-            <img src="img/veterinaria-gato.png" alt="Veterinária cuidando de um gato">
-            <p>Na nossa clínica veterinária, cada consulta é realizada com dedicação e atenção
-                aos detalhes,
-                garantindo
-                o melhor cuidado para o seu pet. Contamos com uma equipe experiente e atualizada
-                para oferecer
-                diagnósticos precisos e tratamentos eficazes.</p>
-            <p>Nós cuidamos do seu pet com o carinho e respeito que ele merece. Nossa equipe
-                dedica atenção a cada
-                detalhe, proporcionando um ambiente acolhedor e seguro para que seu animalzinho
-                se sinta em casa.
-            </p>
-            <img src="img/veterinaria-cachorro.png" alt="Veterinária cuidando de um cachorro">
+            <div id="nossos-servicos-bg-1">
+                <div id="nossos-servicos-content-1">
+                    <h1>Nossos Serviços</h1>
+                    <div class="hoz-layout">
+                        <img id="veterinaria-gato" src="img/veterinaria-gato.png" alt="Veterinária cuidando de um gato">
+                        <p>Na nossa clínica veterinária, cada consulta é realizada com dedicação e atenção aos detalhes,
+                            garantindo o melhor cuidado para o seu pet. Contamos com uma equipe experiente e atualizada
+                            para
+                            oferecer diagnósticos precisos e tratamentos eficazes.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="nossos-servicos-bg-2">
+                <div id="nossos-servicos-content-2">
+                    <div class="hoz-layout">
+                        <p>Nós cuidamos do seu pet com o carinho e respeito que ele merece. Nossa equipe dedica atenção
+                            a
+                            cada detalhe, proporcionando um ambiente acolhedor e seguro para que seu animalzinho se
+                            sinta
+                            em casa.</p>
+                        <img id="veterinaria-cachorro" src="img/veterinaria-cachorro.png"
+                            alt="Veterinária cuidando de um cachorro">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section id="secao3">
