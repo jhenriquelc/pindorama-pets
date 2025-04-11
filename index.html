@@ -11,6 +11,10 @@
         rel="stylesheet">
     <title>Pindorama Pets</title>
     <style>
+        * {
+            scroll-margin: 140px;
+        }
+
         html {
             scroll-behavior: smooth;
         }
@@ -396,6 +400,11 @@
             border: none;
         }
 
+        #carousel-1 button:hover {
+            background-color: #063643;
+            color: #F8F8FF;
+        }
+
         #carousel-1-layout {
             height: calc(100% - 40px);
             position: relative;
@@ -427,21 +436,6 @@
             right: 16px;
         }
 
-        #carousel-1 button {
-            background-color: #F8F8FF;
-            color: #063643;
-            border: none;
-            padding: 10px 20px;
-            width: 280px;
-            height: 72px;
-            border-radius: 4px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: 28px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
         #carousel-1-pegada-superior {
             position: absolute;
             z-index: inherit;
@@ -470,6 +464,10 @@
             background-color: #063643;
             display: flex;
             color: #FFFFFF;
+        }
+
+        #carousel-2 button:hover {
+            background-color: #7CCBE0;
         }
 
         #carousel-2-cachorro {
@@ -531,6 +529,11 @@
             background-color: #063643;
             color: #F8F8FF;
             padding-left: 30px;
+        }
+      
+        #carousel-3 button:hover {
+            background-color: #7CCBE0;
+            color: #063643;
         }
 
         #secao2 {
@@ -688,10 +691,9 @@
                     <div id="carousel-3" class="carousel-card gone">
                         <div id="carousel-3-layout">
                             <div id="carousel-3-texto">
-                                <h1>Banho e toda: cuidado e saúde para seu pet</h1>
+                                <h1>Banho e tosa: cuidado e saúde para seu pet</h1>
                                 <p>Nossa clínica dispõe do serviço de higiene para seu pet permanecer limpo, cheiroso e
-                                    longe de
-                                    parasitas.</p>
+                                    longe de parasitas.</p>
                                 <button>Saiba Mais</button>
                             </div>
                             <img id="carousel-3-gato" src="img/gato-banho.png" alt="Gato segurando utensílios de banho">
