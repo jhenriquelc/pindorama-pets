@@ -14,6 +14,10 @@
         rel="stylesheet">
     <title>Pindorama Pets</title>
     <style>
+        * {
+            scroll-margin: 140px;
+        }
+
         html {
             scroll-behavior: smooth;
         }
@@ -50,9 +54,10 @@
             font-size: 28px;
         }
 
-        .carrousel-card p {
+        .carousel-card p {
             font-family: 'Poppins', sans-serif;
             font-size: 20px;
+            margin-top: 0px;
         }
 
         #contato-form label {
@@ -277,13 +282,14 @@
             right: 50px;
             bottom: 40px;
             position: absolute;
-            z-index: -1;
+            z-index: inherit;
         }
 
         #secao1 {
             display: flex;
             align-items: center;
             flex-direction: column;
+            gap: 40px;
         }
 
         #entre-contato-listras {
@@ -292,7 +298,342 @@
             height: 150px;
             top: 50px;
             right: 50px;
+            z-index: inherit;
+        }
+
+        #carousel-view {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-card {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            z-index: inherit;
+            border-radius: 8px;
+            background: #F8F8FF;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        .carousel-card h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            padding: 0;
+        }
+
+        .carousel-card p {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .carousel-card button {
+            background-color: #F8F8FF;
+            color: #063643;
+            border: none;
+            padding: 10px 20px;
+            width: 280px;
+            height: 72px;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #carousel-card-container {
+            flex-grow: 1;
+            position: relative;
+            display: block;
+            height: 300px;
+        }
+
+        .gone {
+            opacity: 0%;
+            z-index: -2;
+        }
+
+        #carousel {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 1180px;
+            width: calc(100% - 80px);
+        }
+
+        #carousel-indicators {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .carousel-indicator {
+            transition: 0.3s;
+            fill: #A3A3A3;
+        }
+
+        .active-carousel-indicator {
+            fill: #63B3C9;
+        }
+
+        #carousel-view>button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #carousel-1 {
+            background: #63B3C9;
+            border: none;
+        }
+
+        #carousel-1 button:hover {
+            background-color: #063643;
+            color: #F8F8FF;
+        }
+
+        #carousel-1-layout {
+            height: calc(100% - 40px);
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            padding: 20px 40px;
+        }
+
+        #carousel-1-esquerda {
+            position: relative;
+            width: 400px;
+            height: 100%;
+        }
+
+        #carousel-1-direita {
+            position: relative;
+            width: 400px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: left;
+            align-items: left; */
+        }
+
+        #carousel-1-gato {
+            position: absolute;
+            bottom: 4px;
+            right: 16px;
+        }
+
+        #carousel-1-pegada-superior {
+            position: absolute;
+            z-index: inherit;
+            top: 0px;
+            left: 0px;
+        }
+
+        #carousel-1-vacina {
+            position: absolute;
+            z-index: inherit;
+            top: 50px;
+            left: 80px;
+        }
+
+        #carousel-1-pegada-inferior {
+            position: absolute;
+            z-index: inherit;
+            bottom: 0px;
+            left: 150px;
+        }
+
+        #carousel-2 {
+            background-image: url('img/bg-adocao.png');
+            background-size: 1140px;
+            background-position: center;
+            background-color: #063643;
+            display: flex;
+            color: #FFFFFF;
+        }
+
+        #carousel-2 button:hover {
+            background-color: #7CCBE0;
+        }
+
+        #carousel-2-cachorro {
+            width: 200px;
+            height: 211px;
+            object-fit: cover;
+            flex-grow: 0;
+            align-self: flex-end;
+        }
+
+        #carousel-2-gato {
+            justify-self: flex-end;
+            align-self: center;
+        }
+
+        #carousel-2-texto {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 40px;
+            padding-right: 0;
+        }
+
+        #carousel-2 button {
+            height: 62px;
+        }
+
+        #carousel-3-layout {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #carousel-3-texto {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 40px;
+            padding-right: 0;
+        }
+
+        #carousel-3>img {
+            position: absolute;
             z-index: -1;
+        }
+
+        #carousel-3-chuva {
+            top: 0;
+            right: 0;
+        }
+
+        #carousel-3-guarda-chuva {
+            top: 0;
+            left: 0;
+        }
+
+        #carousel-3-gato {
+            padding-right: 10px;
+        }
+
+        #carousel-3 button {
+            background-color: #063643;
+            color: #F8F8FF;
+            padding-left: 30px;
+        }
+
+        #carousel-3 button:hover {
+            background-color: #7CCBE0;
+            color: #063643;
+        }
+
+        #secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(img/fundo-animais.png);
+            width: 100%;
+            padding: 0;
+        }
+
+        #secao2 h1 {
+            margin: 0;
+            padding: 40px 0 20px 0;
+        }
+
+        #veterinaria-gato {
+            width: 320px;
+            height: 260px;
+            border-radius: 8px;
+            border-width: 1px;
+            border-color: #63B3C9;
+            object-fit: cover;
+        }
+
+        #veterinaria-cachorro {
+            width: 320px;
+            height: 260px;
+            border-radius: 8px;
+            border-width: 1px;
+            object-fit: cover;
+        }
+
+        #logo-square {
+            width: 300px;
+            height: 300px;
+            left: 459px;
+
+        }
+
+        #quem-somos {
+            background-color: #89C5D5;
+            background-image: inherit;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #quem-somos-content {
+            display: flex;
+            flex-direction: row;
+            width: calc(100% - 80px);
+            max-width: 1140px;
+            padding: 20px 0;
+        }
+
+        #nossos-servicos {
+            background-image: inherit;
+            width: 100%;
+        }
+
+        #nossos-servicos-bg-1 {
+            width: 100%;
+            background-color: #63B3C9;
+            background-image: inherit;
+            display: flex;
+            justify-content: center;
+        }
+
+        #nossos-servicos-content-1 {
+            width: calc(100% - 80px);
+            max-width: 1140px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #nossos-servicos-content-2 {
+            display: flex;
+            justify-content: center;
+            width: calc(100% - 80px);
+        }
+
+        #nossos-servicos-bg-2 {
+            width: 100%;
+            background-color: #89C5D5;
+            background-image: inherit;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hoz-layout {
+            display: flex;
+            flex-direction: row;
+            max-width: 1140px;
+            gap: 28px;
+            margin: 20px 0;
         }
 
         #nossos-profissionais {
@@ -311,18 +652,6 @@
             padding-top: 120px;
             /* espaçamento do topo até as imagens */
             box-sizing: border-box;
-        }
-
-        /* Título principal */
-        h1 {
-            position: absolute;
-            top: 44px;
-            left: 80px;
-            font-size: 24px;
-            font-weight: 700;
-            color: #1e2d3d;
-            margin: 0;
-            font-family: 'Inter', sans-serif;
         }
 
         /* Cada profissional */
@@ -501,56 +830,107 @@
             <img id="entre-contato-pets" src="img/pets.png" alt="Pets">
             <img id="entre-contato-listras" src="img/stripes.svg" alt="Listras">
         </div>
-        <div id="carrousel">
-            <div id="carrousel-1" class="carrousel-card">
-                <h1>Campanha de vacinção</h1>
-                <p>Nos dias 19 a 28 de Novembro</p>
-                <button>Saiba Mais</button>
-                <img src="img/pata.svg" alt="Pegada de pet" id="pegada-superior">
-                <img src="img/vacina.svg" alt="Agulha de vacina">
-                <img src="img/pata.svg" alt="Pegada de pet" id="pegada-inferior">
+        <div id="carousel">
+            <div id="carousel-view">
+                <button id="carousel-anterior"><img src="img/icons/arrow-left.svg" alt="Botão card anterior"></button>
+                <div id="carousel-card-container">
+                    <div id="carousel-1" class="carousel-card">
+                        <div id="carousel-1-layout">
+                            <div id="carousel-1-esquerda">
+                                <img src="img/pata.svg" alt="Pegada de pet" id="carousel-1-pegada-superior">
+                                <img src="img/vacina.svg" alt="Agulha de vacina" id="carousel-1-vacina">
+                                <img src="img/pata.svg" alt="Pegada de pet" id="carousel-1-pegada-inferior">
+                            </div>
+                            <div id="carousel-1-direita">
+                                <h1>Campanha de vacinação</h1>
+                                <p>Nos dias 19 a 28 de Novembro</p>
+                                <button>Saiba Mais</button>
+                            </div>
+                        </div>
+                        <img src="img/gato-silhueta.svg" alt="Silhueta de gato" id="carousel-1-gato">
+                    </div>
+                    <div id="carousel-2" class="carousel-card gone">
+                        <div id="carousel-2-texto">
+                            <h1>Campanha de adoção</h1>
+                            <p>Dê um lar cheio de amor a quem só quer te fazer feliz! Adote um amigo de quatro patas e
+                                transforme
+                                sua vida e a dele.</p>
+                            <button>Saiba Mais</button>
+                        </div>
+                        <img id="carousel-2-cachorro" src="img/cao-adocao.png" alt="Cachorrinho">
+                        <img id="carousel-2-gato" src="img/gato-adocao.png" alt="Gato olhando pela borda da parede">
+                    </div>
+                    <div id="carousel-3" class="carousel-card gone">
+                        <div id="carousel-3-layout">
+                            <div id="carousel-3-texto">
+                                <h1>Banho e tosa: cuidado e saúde para seu pet</h1>
+                                <p>Nossa clínica dispõe do serviço de higiene para seu pet permanecer limpo, cheiroso e
+                                    longe de parasitas.</p>
+                                <button>Saiba Mais</button>
+                            </div>
+                            <img id="carousel-3-gato" src="img/gato-banho.png" alt="Gato segurando utensílios de banho">
+                        </div>
+                        <img id="carousel-3-chuva" src="img/chuva.png" alt="Gotas caindo">
+                        <img id="carousel-3-guarda-chuva" src="img/guarda-sol-crop.png" alt="Guarda-sol">
+                    </div>
+                </div>
+                <button id="carousel-proximo"><img src="img/icons/arrow-right.svg" alt="Botão próximo card"></button>
             </div>
-            <div id="carrousel-2" class="carrousel-card">
-                <h1>Campanha de adoção</h1>
-                <p>Dê um lar cheio de amor a quem só quer te fazer feliz! Adote um amigo de quatro patas e transforme
-                    sua vida e a dele.</p>
-                <button>Saiba Mais</button>
-                <img src="img/bg-adocao.png" alt="Fundo do card de adoção">
-                <!-- TODO: Adicionar fundo como imagem ou como bg no CSS? -->
-                <img src="img/cao-adocao.png" alt="Cachorrinho">
-                <img src="img/gato-adocao.png" alt="Gato olhando pela borda da parede">
-            </div>
-            <div id="carrousel-3" class="carrousel-card">
-                <h1>Campanha de adoção</h1>
-                <p>Nossa clínica dispõe do serviço de higiene para seu pet permanecer limpo, cheiroso e longe de
-                    parasitas.</p>
-                <button>Saiba Mais</button>
-                <img src="img/gato-banho.png" alt="Gato segurando utensílios de banho">
-                <img src="img/chuva.png" alt="Gotas caindo">
-                <img src="img/guarda-sol-crop.png" alt="Guarda-sol">
+            <div id="carousel-indicators">
+                <svg class="carousel-indicator active-carousel-indicator" width="21" height="20" viewBox="0 0 21 20"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="10.5001" cy="10" rx="10.0926" ry="10" />
+                </svg>
+                <svg class=" carousel-indicator" width="21" height="20" viewBox="0 0 21 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="10.5001" cy="10" rx="10.0926" ry="10" />
+                </svg>
+                <svg class=" carousel-indicator" width="21" height="20" viewBox="0 0 21 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="10.5001" cy="10" rx="10.0926" ry="10" />
+                </svg>
             </div>
         </div>
     </section>
     <section id="secao2">
         <div id="quem-somos">
-            <img src="img/logo-square.svg" alt="Logo Pindorama Pets">
-            <h1>Quem Somos</h1>
-            <p>Nossa clínica veterinária é comprometida com o cuidado e bem-estar de cada pet, com uma equipe
-                dedicada e
-                instalações modernas, buscamos garantir saúde e conforto em cada atendimento. Cuidamos do seu
-                animalzinho como se fosse nosso!</p>
+            <div id="quem-somos-content">
+                <img id="logo-square" src="img/logo-square.svg" alt="Logo Pindorama Pets">
+                <div>
+                    <h1>Quem somos?</h1>
+                    <p>Nossa clínica veterinária é comprometida com o cuidado e bem-estar de cada pet, com uma equipe
+                        dedicada e
+                        instalações modernas, buscamos garantir saúde e conforto em cada atendimento. Cuidamos do seu
+                        animalzinho como se fosse nosso!</p>
+                </div>
+            </div>
         </div>
         <div id="nossos-servicos">
-            <h1>Nossos Serviços</h1>
-            <img src="img/veterinaria-gato.png" alt="Veterinária cuidando de um gato">
-            <p>Na nossa clínica veterinária, cada consulta é realizada com dedicação e atenção aos detalhes,
-                garantindo
-                o melhor cuidado para o seu pet. Contamos com uma equipe experiente e atualizada para oferecer
-                diagnósticos precisos e tratamentos eficazes.</p>
-            <p>Nós cuidamos do seu pet com o carinho e respeito que ele merece. Nossa equipe dedica atenção a cada
-                detalhe, proporcionando um ambiente acolhedor e seguro para que seu animalzinho se sinta em casa.
-            </p>
-            <img src="img/veterinaria-cachorro.png" alt="Veterinária cuidando de um cachorro">
+            <div id="nossos-servicos-bg-1">
+                <div id="nossos-servicos-content-1">
+                    <h1>Nossos Serviços</h1>
+                    <div class="hoz-layout">
+                        <img id="veterinaria-gato" src="img/veterinaria-gato.png" alt="Veterinária cuidando de um gato">
+                        <p>Na nossa clínica veterinária, cada consulta é realizada com dedicação e atenção aos detalhes,
+                            garantindo o melhor cuidado para o seu pet. Contamos com uma equipe experiente e atualizada
+                            para
+                            oferecer diagnósticos precisos e tratamentos eficazes.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="nossos-servicos-bg-2">
+                <div id="nossos-servicos-content-2">
+                    <div class="hoz-layout">
+                        <p>Nós cuidamos do seu pet com o carinho e respeito que ele merece. Nossa equipe dedica atenção
+                            a
+                            cada detalhe, proporcionando um ambiente acolhedor e seguro para que seu animalzinho se
+                            sinta
+                            em casa.</p>
+                        <img id="veterinaria-cachorro" src="img/veterinaria-cachorro.png"
+                            alt="Veterinária cuidando de um cachorro">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section id="secao3">
@@ -702,6 +1082,14 @@
     </footer>
 
     <script>
+        // Adiciona módulo para número (funciona diferente de % para números negativos)
+        // Exemplo: -1 % 3 = -1, mas -1.mod(3) = 2
+        Number.prototype.mod = function (n) {
+            "use strict";
+            return ((this % n) + n) % n;
+        };
+
+        // AVALIAÇÕES
         let avaliacoes = [
             [
                 { nome: "Carlos Alberto", texto: "Atendimento excepcional! A equipe foi muito cuidadosa e atenciosa com meu pet." },
@@ -766,6 +1154,34 @@
 
             atualizar_avaliacoes(pag_atual);
         });
+        // FIM AVALIAÇÕES
+
+        // CAROUSEL
+        let carousel_cards_dom = document.getElementsByClassName("carousel-card");
+        let carousel_indicators_dom = document.getElementsByClassName("carousel-indicator");
+        let atualizar_carousel = (card_i) => {
+            for (let i = 0; i < carousel_cards_dom.length; i++) {
+                if (i == card_i) {
+                    carousel_cards_dom[i].classList.remove("gone");
+                    carousel_indicators_dom[i].classList.add("active-carousel-indicator");
+                } else {
+                    carousel_cards_dom[i].classList.add("gone");
+                    carousel_indicators_dom[i].classList.remove("active-carousel-indicator");
+                }
+            }
+        }
+
+        document.getElementById("carousel-anterior").addEventListener('click', (event) => {
+            card_atual = (card_atual - 1).mod(carousel_cards_dom.length);
+            atualizar_carousel(card_atual);
+        });
+        document.getElementById("carousel-proximo").addEventListener('click', (event) => {
+            card_atual = (card_atual + 1).mod(carousel_cards_dom.length);
+            atualizar_carousel(card_atual);
+        });
+        let card_atual = 0;
+        atualizar_carousel(card_atual);
+        // FIM CAROUSEL
     </script>
 </body>
 
