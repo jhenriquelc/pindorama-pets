@@ -9,6 +9,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <title>Pindorama Pets</title>
     <style>
         * {
@@ -530,7 +533,7 @@
             color: #F8F8FF;
             padding-left: 30px;
         }
-      
+
         #carousel-3 button:hover {
             background-color: #7CCBE0;
             color: #063643;
@@ -631,6 +634,182 @@
             max-width: 1140px;
             gap: 28px;
             margin: 20px 0;
+        }
+
+        #nossos-profissionais {
+            width: calc(100vw - 80px);
+            max-width: 1180px;
+            background-color: #f7f8fe;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            position: relative;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        #nossos-profissionais h1 {
+            padding: 40px 40px;
+            margin: 0;
+        }
+
+        #profissionais-layout {
+            display: flex;
+            gap: 10px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        /* Cada profissional */
+        .profissional {
+            width: 240px;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Imagem do profissional */
+        .profissional img {
+            width: 240px;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Nome do profissional */
+        .Nome-do-profissional {
+            margin-top: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e2d3d;
+        }
+
+        /* Área de atuação */
+        .Area-profissional {
+            margin-top: 4px;
+            font-size: 14px;
+            color: #3d4d5d;
+            font-weight: 400;
+        }
+
+
+        #rodape {
+            width: 1920px;
+            height: 272px;
+            background-color: #f6f8ff;
+            position: relative;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* LOGO */
+        #rodape>img {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 1px;
+            left: 370px;
+        }
+
+        /* NOSSOS SERVIÇOS */
+        #rodape h1:nth-of-type(1) {
+            position: absolute;
+            top: 38px;
+            left: 670px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #1c3446;
+        }
+
+        /* Lista da primeira coluna */
+        #rodape ul:nth-of-type(1) {
+            position: absolute;
+            top: 74px;
+            left: 670px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #rodape ul:nth-of-type(1) li {
+            font-size: 14px;
+            color: #1c3446;
+            margin-bottom: 10px;
+        }
+
+        /* INSTITUCIONAL */
+        #rodape h1:nth-of-type(2) {
+            position: absolute;
+            top: 36px;
+            left: 950px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #1c3446;
+        }
+
+        /* Lista da segunda coluna */
+        #rodape ul:nth-of-type(2) {
+            position: absolute;
+            top: 72px;
+            left: 950px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #rodape ul:nth-of-type(2) li {
+            font-size: 14px;
+            color: #1c3446;
+            margin-bottom: 10px;
+        }
+
+        /* NOSSOS CONTATOS */
+        #rodape h1:nth-of-type(3) {
+            position: absolute;
+            top: 36px;
+            left: 1260px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #1c3446;
+        }
+
+        /* ÍCONES DE CONTATO */
+        .icones.contato {
+            position: absolute;
+            top: 72px;
+            right: 514px;
+            /* Facebook é o mais à esquerda */
+            display: flex;
+            gap: 20px;
+        }
+
+        .icones.contato img {
+            width: 36px;
+            height: 36px;
+            background-color: #65a9be;
+            border-radius: 50%;
+            padding: 6px;
+            box-sizing: border-box;
+        }
+
+        /* BARRA FINAL COM DIREITOS */
+        #rodape>div:last-child {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #043f52;
+            text-align: center;
+            padding: 12px 0;
+        }
+
+        #rodape>div:last-child p {
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 0;
         }
     </style>
 </head>
@@ -764,25 +943,27 @@
     <section id="secao3">
         <div id="nossos-profissionais">
             <h1>Nossos Profissionais</h1>
-            <div class="profissional">
-                <img src="img/profissionais/carlos-de-souza.jpg" alt="Carlos De Souza">
-                <h2>Carlos De Souza</h2>
-                <h3>Cirurgia Veterinaria</h3>
-            </div>
-            <div class="profissional">
-                <img src="img/profissionais/joao-paulo.jpg" alt="João Paulo">
-                <h2>João Paulo</h2>
-                <h3>Dermatorlogia Veterinaria</h3>
-            </div>
-            <div class="profissional">
-                <img src="img/profissionais/jose-da-silva.jpg" alt="José da Silva">
-                <h2>José da Silva</h2>
-                <h3>Patologia</h3>
-            </div>
-            <div class="profissional">
-                <img src="img/profissionais/fulano.png" alt="Fulano">
-                <h2>fulano</h2>
-                <h3>Anestesiologia</h3>
+            <div id="profissionais-layout">
+                <div class="profissional">
+                    <img src="img/profissionais/carlos.jpg" alt="Carlos" width="240px" height="240px">
+                    <h2 class="Nome-do-profissional">Carlos De Souza</h2>
+                    <h3 class="Area-profissional">Cirurgia Veterinaria</h3>
+                </div>
+                <div class="profissional">
+                    <img src="img/profissionais/joao-paulo.jpg" alt="João Paulo" width="240px" height="240px">
+                    <h2 class="Nome-do-profissional">João Paulo</h2>
+                    <h3 class="Area-profissional">Dermatorlogia Veterinaria</h3>
+                </div>
+                <div class="profissional">
+                    <img src="img/profissionais/jose-da-silva.jpg" alt="José da Silva" width="240px" height="240px">
+                    <h2 class="Nome-do-profissional">José da Silva</h2>
+                    <h3 class="Area-profissional">Patologia</h3>
+                </div>
+                <div class="profissional">
+                    <img src="img/profissionais/fulano.png" alt="Fulano" width="240px" height="240px">
+                    <h2 class="Nome-do-profissional">fulano</h2>
+                    <h3 class="Area-profissional">Anestesiologia</h3>
+                </div>
             </div>
         </div>
         <div id="avaliacoes">
@@ -936,11 +1117,10 @@
             ],
         ];
 
-        numero_pagina_dom = document.getElementById("avaliacao-pagina");
-        let avaliacoes_dom = document.getElementsByClassName("avaliacao");
         let atualizar_avaliacoes = (pag) => {
-            numero_pagina_dom.textContent = pag;
+            document.getElementById("avaliacao-pagina").textContent = pag;
             let avaliacoes_content = avaliacoes[pag - 1];
+            let avaliacoes_dom = document.getElementsByClassName("avaliacao");
 
             for (let i = 0; i < 3; i++) {
                 let nome = avaliacoes_dom[i].getElementsByTagName("h2")[0]
