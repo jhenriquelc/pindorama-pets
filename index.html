@@ -811,6 +811,125 @@
             font-weight: bold;
             margin: 0;
         }
+
+        #entre-em-contato {
+            width: calc(100% - 80px);
+            max-width: 1140px;
+        }
+
+        #contato-card {
+            display: flex;
+            width: 100%;
+            background-color: #F8F8FF;
+            border: 1px solid rgba(6, 54, 67, 0.4);
+            border-radius: 8px;
+            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+        }
+
+        #contato-localizacao {
+            border-right: 1px solid rgba(6, 54, 67, 0.4);
+            padding: 20px;
+            width: 380px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #contato-localizacao h2 {
+            padding: 20px 0;
+            margin: 0;
+        }
+
+        #contato-localizacao p {
+            font-weight: 400;
+            font-size: 20px;
+        }
+
+        #contato-form {
+            padding: 40px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            width: 100%;
+        }
+
+        #contato-form * {
+            width: 100%;
+        }
+
+        #contato-form input[type="text"] {
+            height: 38px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.4);
+            transition: 0.3s;
+            outline: none;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 10px;
+        }
+
+        #contato-form input[type="text"]:focus {
+            border: 2px solid rgba(6, 54, 67, 1)
+        }
+
+        #contato-form .form-text input[type="text"] {
+            height: 120px;
+        }
+
+        #contato-form>* {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        #contato-form input[type="submit"] {
+            border: none;
+            height: 55px;
+            width: 144px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 8px;
+            background-color: #0F637A;
+            color: #F8F8FF;
+        }
+
+        #form-line {
+            width: 100%;
+        }
+
+        .icone-contato {
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            background-color: #7CCBE0;
+            border-radius: 50%;
+        }
+
+        #contato-localizacao>img {
+            width: 320px;
+            align-self: center;
+            border-radius: 8px;
+            border: 1px solid #0F637A66;
+        }
+
+        .contato-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contato-info p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        #contato-localizacao-info {
+            justify-self: flex-start;
+        }
     </style>
 </head>
 
@@ -825,7 +944,7 @@
                 <a href="#">Início</a>
                 <a href="#nossos-servicos">Serviços</a>
                 <a href="#quem-somos">Sobre Nós</a>
-                <a href="#contato-card">Contato</a>
+                <a href="#entre-em-contato">Contato</a>
             </div>
         </nav>
     </header>
@@ -1029,40 +1148,53 @@
                 </div>
             </div>
         </div>
-        <div id="contato-card">
+        <div id="entre-em-contato">
             <h1>Entre em contato</h1>
-            <div id="contato-localização">
-                <h2>Localização</h2>
-                <p><i>Rua Fulana de tal, 9999 CEP 99999-999 Pindorama/SP</i></p>
-                <img src="" alt="">
-                <h3>(99)99999999</h3>
-                <h3>@PindoramaClinica</h3>
-                <h3>PindoramaClinica </h3>
+            <div id="contato-card">
+                <div id="contato-localizacao">
+                    <h2>Localização</h2>
+                    <p><i>Rua Fulana de tal, 9999<br>CEP 99999-999<br>Pindorama/SP</i></p>
+                    <img src="img/pindorama.png" alt="Localização da Pindorama Pets">
+                    <!-- TODO: corrigir ícones de meios de contato -->
+                    <div id="contato-localizacao-info">
+                        <div class="contato-info">
+                            <img class="icone-contato" src="img/icons/whatsapp.svg" alt="Ícone WhatsApp">
+                            <p>(99)99999999</p>
+                        </div>
+                        <div class="contato-info">
+                            <img class="icone-contato" src="img/icons/instragram.svg" alt="Ícone Instagram">
+                            <p>@PindoramaClinica</p>
+                        </div>
+                        <div class="contato-info">
+                            <img class="icone-contato" src="img/icons/facebook.svg" alt="Ícone Facebook">
+                            <p>PindoramaClinica</p>
+                        </div>
+                    </div>
+                </div>
+                <form action="" id="contato-form">
+                    <div class="form-line">
+                        <label for="form-nome">Nome</label>
+                        <input type="text" id="form-nome">
+                    </div>
+
+                    <div class="form-line">
+                        <label for="form-sobrenome">Sobrenome</label>
+                        <input type="text" id="form-sobrenome">
+                    </div>
+
+                    <div class="form-line">
+                        <label for="form-email">E-mail</label>
+                        <input type="text" id="form-email">
+                    </div>
+
+                    <div class="form-text">
+                        <label for="form-mensagem">Mensagem</label>
+                        <input type="text">
+                    </div>
+                    <input class="form-button" type="submit" value="ENVIAR">
+                </form>
+
             </div>
-
-            <form action="" id="contato-form">
-                <div class="form-line">
-                    <label for="form-nome">Nome</label>
-                    <input type="text" id="form-nome">
-                </div>
-
-                <div class="form-line">
-                    <label for="form-sobrenome">Sobrenome</label>
-                    <input type="text" id="form-sobrenome">
-                </div>
-
-                <div class="form-line">
-                    <label for="form-email">E-mail</label>
-                    <input type="text" id="form-email">
-                </div>
-
-                <div class="form-text">
-                    <label for="form-mensagem">Mensagem</label>
-                    <input type="text">
-                </div>
-                <input type="submit">
-            </form>
-
         </div>
     </section>
     <footer id="rodape">
